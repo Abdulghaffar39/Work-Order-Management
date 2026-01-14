@@ -4,7 +4,8 @@ import SignupForm from './Containers/Signup/Signup';
 import LoginForm from './Containers/Login/Login';
 import Admin from './Containers/Admin/Admin';
 import { ThemeProvider } from '@mui/material';
-import { theme } from './theme';
+import theme from './theme/theme';
+// import theme from './theme/theme';
 
 
 function App() {
