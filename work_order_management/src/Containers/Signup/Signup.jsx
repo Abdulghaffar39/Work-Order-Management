@@ -40,7 +40,7 @@ const SignupForm = ({ theme }) => {
         <Container sx={{ width: "70%", height: "550px", margin: "100px auto", borderRadius: "12px", background: "white", display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", width: { lg: "80%", } }}>
 
 
-            <Stack sx={{ width: "90%", alignItems: 'center', gap: "40px" }}>
+            <Stack sx={{ width: "90%", alignItems: 'center', gap: "40px" }}>    
 
                 <img
                     width="220px"
