@@ -20,6 +20,7 @@ import Overdue from "../Overdue/Overdue";
 import Technician from "../Technician/Technician";
 import Report from "../Report/Report";
 import Setting from "../Setting/Setting";
+import { Link } from "react-router";
 
 export default function Admin() {
 
@@ -54,11 +55,11 @@ export default function Admin() {
 
     return (
 
-        <Box sx={{ width: "100%", display: "flex", flexDirection: "row", }}>
+        <Box sx={{ width: "100%", display: "flex", flexDirection: "row", justifyContent: "center" }}>
 
-            <Box sx={{ width: "200px", height: "97vh", background: "white", display: "flex", flexDirection: "column", justifyContent: "space-between", width: { xs: "1000px", sm: "400px", xl: "300px" }, }}>
+            <Box sx={{ width: "20%", height: "97vh", background: "white", display: "flex", flexDirection: "column", justifyContent: "space-between", width: { xs: "1000px", sm: "400px", xl: "300px" }, }}>
 
-                <Box sx={{ width: "100%", height: "10%", display: "flex", flexDirection: "row", alignItems: "center", gap: "10px", border: "1px solid gray", padding: "20px"}}>
+                <Box sx={{ width: "100%", height: "10%", display: "flex", flexDirection: "row", alignItems: "center", gap: "10px", border: "1px solid gray", padding: "20px" }}>
 
                     <Box sx={{ width: "35px", height: "35px", background: "black", borderRadius: "10px", display: "flex", justifyContent: "center", alignItems: "center" }}>
                         <BuildIcon sx={{ fontSize: "18px", color: "gray" }} />
@@ -70,7 +71,7 @@ export default function Admin() {
 
                 </Box>
 
-                <Box sx={{ width: "100%", height: "100%", display: "flex", flexDirection: "column", alignItems: "start", gap: "0px", padding: "20px 0px", padding: "20px 0px", borderLeft:"1px solid gray", borderRight:"1px solid gray", }}>
+                <Box sx={{ width: "100%", height: "100%", display: "flex", flexDirection: "column", alignItems: "start", gap: "0px", padding: "20px 0px", borderLeft: "1px solid gray", borderRight: "1px solid gray", }}>
 
                     <Box onClick={() => setActive("dashboard")} sx={{ width: "90%", borderRadius: "8px", display: "flex", alignItems: "center", margin: "0 auto", gap: "10px", padding: "10px", ":hover": { background: "gray" }, cursor: "pointer" }}>
 
@@ -185,15 +186,17 @@ export default function Admin() {
 
                     </Box>
 
-                    <Box>
-                        <LogoutIcon sx={{ color: "black", fontWeight: 800, cursor: "pointer" }} />
-                    </Box>
+                    <Link to="/">
+                        <Box>
+                            <LogoutIcon sx={{ color: "black", fontWeight: 800, cursor: "pointer" }} />
+                        </Box>
+                    </Link>
 
                 </Box>
 
             </Box>
 
-            <Box sx={{ width: "80%", background:"white" }}>
+            <Box sx={{ width: "80%", background: "white", overflow: "auto" }}>
 
                 {renderContent()}
 
