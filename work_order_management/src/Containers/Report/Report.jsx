@@ -113,7 +113,7 @@ export default function Report () {
 
       </Box>
 
-      <Box>
+      <Box sx={{overflow:"scroll", height:"87vh"}}>
         <img style={{width:"100%"}} src={report} alt="dash board" />
       </Box>
 

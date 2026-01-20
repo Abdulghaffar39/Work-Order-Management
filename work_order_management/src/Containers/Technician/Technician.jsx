@@ -114,7 +114,7 @@ export default function Technician () {
 
       </Box>
 
-      <Box>
+      <Box sx={{overflow:"scroll", height:"87vh"}}>
         <img style={{width:"100%"}} src={technician} alt="dash board" />
       </Box>
 

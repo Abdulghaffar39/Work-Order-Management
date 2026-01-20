@@ -5,21 +5,10 @@ import IconButton from '@mui/material/IconButton';
 import Typography from '@mui/material/Typography';
 import InputBase from '@mui/material/InputBase';
 import Badge from '@mui/material/Badge';
-import MenuItem from '@mui/material/MenuItem';
-import Menu from '@mui/material/Menu';
 import SearchIcon from '@mui/icons-material/Search';
-import AccountCircle from '@mui/icons-material/AccountCircle';
 import MailIcon from '@mui/icons-material/Mail';
-import AssignmentIcon from '@mui/icons-material/Assignment';
-import AccessTimeIcon from '@mui/icons-material/AccessTime';
 import NotificationsIcon from '@mui/icons-material/Notifications';
-import WarningAmberIcon from '@mui/icons-material/WarningAmber';
-import AddTaskIcon from '@mui/icons-material/AddTask';
-import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
-import { Paper } from '@mui/material';
-import Cont from '../../Components/Cont/Cont';
-import SmallCont from '../../Components/SmallCont/SmallCont';
-import upcoming from "../../Images/3.png"
+import Jobout from "../../Images/JobOut.png"
 
 const Search = styled('div')(({ theme }) => ({
 
@@ -66,7 +55,7 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
 
 }));
 
-export default function Upcoming() {
+export default function JobOut () {
 
   return (
 
@@ -75,7 +64,7 @@ export default function Upcoming() {
       <Box sx={{ width: "100%", height: "8.9%", display: "flex", flexDirection: "row", justifyContent: "space-between", alignItems: "center", gap: "10px", border: "1px solid gray", padding: "20px", borderLeft: "none" }}>
 
         <Box sx={{ display: "flex", flexDirection: "column", justifyContent: "center", alignItems: "start" }}>
-          <Typography sx={{ fontWeight: 600, fontSize: "28px" }}>Maintenance</Typography>
+          <Typography sx={{ fontWeight: 600, fontSize: "28px"  }}>JOB Out</Typography>
           <Typography sx={{ fontSize: "16px", }}>Manage and track all maintenance requests</Typography>
         </Box>
 
@@ -113,8 +102,8 @@ export default function Upcoming() {
 
       </Box>
 
-      <Box sx={{ overflow: "scroll", height: "87vh" }}>
-        <img style={{ width: "100%" }} src={upcoming} alt="dash board" />
+      <Box sx={{width:"100%", display:"flex", justifyContent:"center", alignItems:"center", overflow:"hidden", overflow: "scroll", width: "100%", height: "86.5vh" }}>
+        <img style={{width:"100%", height:"100%"}} src={Jobout} alt="dash board" />
       </Box>
 
     </>

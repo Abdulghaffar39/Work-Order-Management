@@ -5,6 +5,8 @@ import LoginForm from './Containers/Login/Login';
 import Admin from './Containers/Admin/Admin';
 import { ThemeProvider } from '@mui/material';
 import theme from './theme/theme';
+import BrushZoom from './Containers/BrushZoom/BrushZoom';
+import SyncTooltip from './Containers/BrushZoom/BrushZoom';
 
 function App() {
 
@@ -15,6 +17,7 @@ function App() {
           <Route path='/' element={<SignupForm theme={theme} />} />
           <Route path='/login' element={<LoginForm theme={theme} />} />
           <Route path='/admin' element={<Admin theme={theme} />} />
+          <Route path='/syncTooltip' element={<SyncTooltip />} />
         </Routes>
       </ThemeProvider>
     </>

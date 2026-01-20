@@ -8,6 +8,7 @@ import HandymanIcon from '@mui/icons-material/Handyman';
 import UpcomingIcon from '@mui/icons-material/Upcoming';
 import SettingsIcon from '@mui/icons-material/Settings';
 import DashboardIcon from '@mui/icons-material/Dashboard';
+import HomeWorkIcon from '@mui/icons-material/HomeWork';
 import OfflinePinIcon from '@mui/icons-material/OfflinePin';
 import WatchLaterIcon from '@mui/icons-material/WatchLater';
 import EngineeringIcon from '@mui/icons-material/Engineering';
@@ -21,6 +22,8 @@ import Technician from "../Technician/Technician";
 import Report from "../Report/Report";
 import Setting from "../Setting/Setting";
 import { Link } from "react-router";
+import JobIN from "../JobIN/JobIn";
+import JobOut from "../JobOut/JobOut";
 
 export default function Admin() {
 
@@ -33,6 +36,10 @@ export default function Admin() {
                 return <Users />;
             case "jobs":
                 return <Jobs />;
+            case "JobIN":
+                return <JobIN />;
+            case "jobout":
+                return <JobOut />;
             case "maintenance":
                 return <Maintenance />;
             case "completed":
@@ -73,7 +80,7 @@ export default function Admin() {
 
                 <Box sx={{ width: "100%", height: "100%", display: "flex", flexDirection: "column", alignItems: "start", gap: "0px", padding: "20px 0px", borderLeft: "1px solid gray", borderRight: "1px solid gray", }}>
 
-                    <Box onClick={() => setActive("dashboard")} sx={{ width: "90%", borderRadius: "8px", display: "flex", alignItems: "center", margin: "0 auto", gap: "10px", padding: "10px", ":hover": { background: "gray" }, cursor: "pointer" }}>
+                    <Box onClick={() => setActive("dashboard")} sx={{backgroundColor: active === "dashboard" ? "#D3D3D3" : "transparent", width: "90%", borderRadius: "8px", display: "flex", alignItems: "center", margin: "0 auto", gap: "10px", padding: "10px", ":hover": { background: "#D3D3D3" }, cursor: "pointer" }}>
 
                         <Box>
                             <DashboardIcon />
@@ -85,7 +92,31 @@ export default function Admin() {
 
                     </Box>
 
-                    <Box onClick={() => setActive("maintenance")} sx={{ width: "90%", borderRadius: "8px", display: "flex", alignItems: "center", margin: "0 auto", gap: "10px", padding: "10px", ":hover": { background: "gray" }, cursor: "pointer" }}>
+                    <Box onClick={() => setActive("JobIN")} sx={{backgroundColor: active === "JobIN" ? "#D3D3D3" : "transparent", width: "90%", borderRadius: "8px", display: "flex", alignItems: "center", margin: "0 auto", gap: "10px", padding: "10px", ":hover": { background: "#D3D3D3" }, cursor: "pointer" }}>
+
+                        <Box>
+                            <HomeWorkIcon />
+                        </Box>
+
+                        <Box>
+                            <Typography sx={{ fontWeight: 600, textTransform: "uppercase" }}>Job IN</Typography>
+                        </Box>
+
+                    </Box>
+
+                    <Box onClick={() => setActive("jobout")} sx={{backgroundColor: active === "jobout" ? "#D3D3D3" : "transparent", width: "90%", borderRadius: "8px", display: "flex", alignItems: "center", margin: "0 auto", gap: "10px", padding: "10px", ":hover": { background: "#D3D3D3" }, cursor: "pointer" }}>
+
+                        <Box>
+                            <HomeWorkIcon />
+                        </Box>
+
+                        <Box>
+                            <Typography sx={{ fontWeight: 600, textTransform: "uppercase" }}>jobout</Typography>
+                        </Box>
+
+                    </Box>
+
+                    <Box onClick={() => setActive("maintenance")} sx={{backgroundColor: active === "maintenance" ? "#D3D3D3" : "transparent", width: "90%", borderRadius: "8px", display: "flex", alignItems: "center", margin: "0 auto", gap: "10px", padding: "10px", ":hover": { background: "#D3D3D3" }, cursor: "pointer" }}>
 
                         <Box>
                             <EngineeringIcon />
@@ -97,7 +128,7 @@ export default function Admin() {
 
                     </Box>
 
-                    <Box onClick={() => setActive("upcoming")} sx={{ width: "90%", borderRadius: "8px", display: "flex", alignItems: "center", margin: "0 auto", gap: "10px", padding: "10px", ":hover": { background: "gray" }, cursor: "pointer" }}>
+                    <Box onClick={() => setActive("upcoming")} sx={{backgroundColor: active === "upcoming" ? "#D3D3D3" : "transparent", width: "90%", borderRadius: "8px", display: "flex", alignItems: "center", margin: "0 auto", gap: "10px", padding: "10px", ":hover": { background: "#D3D3D3" }, cursor: "pointer" }}>
 
                         <Box>
                             <UpcomingIcon />
@@ -109,7 +140,7 @@ export default function Admin() {
 
                     </Box>
 
-                    <Box onClick={() => setActive("completed")} sx={{ width: "90%", borderRadius: "8px", display: "flex", alignItems: "center", margin: "0 auto", gap: "10px", padding: "10px", ":hover": { background: "gray" }, cursor: "pointer" }}>
+                    <Box onClick={() => setActive("completed")} sx={{backgroundColor: active === "completed" ? "#D3D3D3" : "transparent", width: "90%", borderRadius: "8px", display: "flex", alignItems: "center", margin: "0 auto", gap: "10px", padding: "10px", ":hover": { background: "#D3D3D3" }, cursor: "pointer" }}>
 
                         <Box>
                             <OfflinePinIcon />
@@ -121,7 +152,7 @@ export default function Admin() {
 
                     </Box>
 
-                    <Box onClick={() => setActive("overdue")} sx={{ width: "90%", borderRadius: "8px", display: "flex", alignItems: "center", margin: "0 auto", gap: "10px", padding: "10px", ":hover": { background: "gray" }, cursor: "pointer" }}>
+                    <Box onClick={() => setActive("overdue")} sx={{backgroundColor: active === "overdue" ? "#D3D3D3" : "transparent", width: "90%", borderRadius: "8px", display: "flex", alignItems: "center", margin: "0 auto", gap: "10px", padding: "10px", ":hover": { background: "#D3D3D3" }, cursor: "pointer" }}>
 
                         <Box>
                             <WatchLaterIcon />
@@ -133,7 +164,7 @@ export default function Admin() {
 
                     </Box>
 
-                    <Box onClick={() => setActive("technician")} sx={{ width: "90%", borderRadius: "8px", display: "flex", alignItems: "center", margin: "0 auto", gap: "10px", padding: "10px", ":hover": { background: "gray" }, cursor: "pointer" }}>
+                    <Box onClick={() => setActive("technician")} sx={{backgroundColor: active === "technician" ? "#D3D3D3" : "transparent", width: "90%", borderRadius: "8px", display: "flex", alignItems: "center", margin: "0 auto", gap: "10px", padding: "10px", ":hover": { background: "#D3D3D3" }, cursor: "pointer" }}>
 
                         <Box>
                             <HandymanIcon />
@@ -145,7 +176,7 @@ export default function Admin() {
 
                     </Box>
 
-                    <Box onClick={() => setActive("report")} sx={{ width: "90%", borderRadius: "8px", display: "flex", alignItems: "center", margin: "0 auto", gap: "10px", padding: "10px", ":hover": { background: "gray" }, cursor: "pointer" }}>
+                    <Box onClick={() => setActive("report")} sx={{backgroundColor: active === "report" ? "#D3D3D3" : "transparent", width: "90%", borderRadius: "8px", display: "flex", alignItems: "center", margin: "0 auto", gap: "10px", padding: "10px", ":hover": { background: "#D3D3D3" }, cursor: "pointer" }}>
 
                         <Box>
                             <ReportIcon />
@@ -157,7 +188,7 @@ export default function Admin() {
 
                     </Box>
 
-                    <Box onClick={() => setActive("setting")} sx={{ width: "90%", borderRadius: "8px", display: "flex", alignItems: "center", margin: "0 auto", gap: "10px", padding: "10px", ":hover": { background: "gray" }, cursor: "pointer" }}>
+                    <Box onClick={() => setActive("setting")} sx={{backgroundColor: active === "setting" ? "#D3D3D3" : "transparent", width: "90%", borderRadius: "8px", display: "flex", alignItems: "center", margin: "0 auto", gap: "10px", padding: "10px", ":hover": { background: "#D3D3D3" }, cursor: "pointer" }}>
 
                         <Box>
                             <SettingsIcon />
@@ -191,6 +222,7 @@ export default function Admin() {
                             <LogoutIcon sx={{ color: "black", fontWeight: 800, cursor: "pointer" }} />
                         </Box>
                     </Link>
+
 
                 </Box>
 

@@ -113,7 +113,7 @@ export default function Completed() {
 
       </Box>
 
-      <Box>
+      <Box sx={{overflow:"scroll", height:"87vh"}}>
         <img style={{width:"100%"}} src={comple} alt="dash board" />
       </Box>
 

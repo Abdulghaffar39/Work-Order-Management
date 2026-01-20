@@ -113,7 +113,7 @@ export default function Overdue () {
 
       </Box>
 
-      <Box>
+      <Box  sx={{overflow:"scroll", height:"87vh"}}>
         <img style={{width:"100%"}} src={over} alt="dash board" />
       </Box>
 

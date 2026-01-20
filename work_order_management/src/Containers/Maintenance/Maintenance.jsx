@@ -16,10 +16,13 @@ import NotificationsIcon from '@mui/icons-material/Notifications';
 import WarningAmberIcon from '@mui/icons-material/WarningAmber';
 import AddTaskIcon from '@mui/icons-material/AddTask';
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
-import { Paper } from '@mui/material';
+import { Button, Paper } from '@mui/material';
 import Cont from '../../Components/Cont/Cont';
 import SmallCont from '../../Components/SmallCont/SmallCont';
 import maintainace from "../../Images/2.png"
+import { Link } from 'react-router';
+import BrushZoom from '../BrushZoom/BrushZoom';
+import SyncTooltip from '../BrushZoom/BrushZoom';
 
 const Search = styled('div')(({ theme }) => ({
 
@@ -70,12 +73,12 @@ export default function Maintenance() {
 
   return (
 
-    <>
+    <Box>
 
       <Box sx={{ width: "100%", height: "8.9%", display: "flex", flexDirection: "row", justifyContent: "space-between", alignItems: "center", gap: "10px", border: "1px solid gray", padding: "20px", borderLeft: "none" }}>
 
         <Box sx={{ display: "flex", flexDirection: "column", justifyContent: "center", alignItems: "start" }}>
-          <Typography sx={{ fontWeight: 600, fontSize: "28px"  }}>Maintenance</Typography>
+          <Typography sx={{ fontWeight: 600, fontSize: "28px" }}>Maintenance</Typography>
           <Typography sx={{ fontSize: "16px", }}>Manage and track all maintenance requests</Typography>
         </Box>
 
@@ -113,10 +116,14 @@ export default function Maintenance() {
 
       </Box>
 
-      <Box>
-        <img style={{width:"100%"}} src={maintainace} alt="dash board" />
+      <Box sx={{ overflow: "scroll", width: "100%", height: "86.5vh" }}>
+
+        <img style={{ width: "100%" }} src={maintainace} alt="dash board" />
+
+        <SyncTooltip sx={{ width: "100%" }} />
+
       </Box>
 
-    </>
+    </Box>
   );
 }
